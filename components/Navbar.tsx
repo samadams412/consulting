@@ -19,24 +19,26 @@ import { FaIndustry } from "react-icons/fa6";
 
 import { PersonIcon, ReaderIcon } from '@radix-ui/react-icons';
     //array containing links, could add more links here
-    const links = [{
-      href: "/dashboard",
-      text:"Dashboard",
-      Icon: ReaderIcon
-  },
-  {
-      href: "/dashboard/user",
-      text:"User",
-      Icon: PersonIcon
-  }
-]
+//     const links = [{
+//       href: "/dashboard",
+//       text:"Dashboard",
+//       Icon: ReaderIcon
+//   },
+//   {
+//       href: "/dashboard/user",
+//       text:"User",
+//       Icon: PersonIcon
+//   }
+// ]
 
 export default function Navbar() {
   return (
     <Menubar className='flex'>
+      <Link href={'/'}>
       <FaCloudDownloadAlt className='text-4xl'/>
+      </Link>
     <MenubarMenu>
-      <MenubarTrigger><GrTechnology/>Services</MenubarTrigger>
+      <MenubarTrigger><GrTechnology className='mx-1'/>Services</MenubarTrigger>
       <MenubarContent>
         <MenubarItem>
           <Link href={'/services/managed-it'}>
@@ -66,7 +68,7 @@ export default function Navbar() {
       </MenubarContent>
     </MenubarMenu>
     <MenubarMenu>
-      <MenubarTrigger>Industries</MenubarTrigger>
+      <MenubarTrigger><FaIndustry className='mx-1'/>Industries</MenubarTrigger>
       <MenubarContent>
         <MenubarItem>
           Healthcare
@@ -112,7 +114,7 @@ export default function Navbar() {
       </MenubarContent>
     </MenubarMenu>
     <MenubarMenu>
-      <MenubarTrigger className="flex-end">Contact Us</MenubarTrigger>
+      <MenubarTrigger className="text-right">Contact Us</MenubarTrigger>
       <MenubarContent>
         <MenubarItem>
           Cloud Migration
