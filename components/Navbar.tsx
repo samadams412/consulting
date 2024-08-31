@@ -80,7 +80,7 @@ export default function Navbar() {
       </MenubarContent>
     </MenubarMenu>
     <MenubarMenu>
-      <MenubarTrigger>Solutions</MenubarTrigger>
+      <MenubarTrigger>Solutions and more</MenubarTrigger>
       <MenubarContent>
         <MenubarItem>
           Cloud Migration
