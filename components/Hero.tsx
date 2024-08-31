@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <div className=''>Hero Goes Here...</div>
+    <div className='px-3'>Hero Goes Here...</div>
   )
 }
