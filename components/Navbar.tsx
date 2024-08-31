@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function Navbar() {
   return (
     <Menubar className='flex'>
-      <Link href={'/'}>
+      <Link href={'/'} className='mx-3'>
         <FaCloudDownloadAlt className='text-4xl' />
       </Link>
       
