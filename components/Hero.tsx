@@ -12,7 +12,7 @@ export default function HeroSectionImageWithReviews() {
               Elevate Your Business with Expert Consulting
             </h1>
             <p className="mt-3 text-xl text-muted-foreground">
-            Unlock your company's potential with tailored consulting solutions designed to drive success and innovation.
+            Unlock your company&apos;s potential with tailored consulting solutions designed to drive success and innovation.
             </p>
             {/* Buttons */}
             <div className="mt-7 grid gap-3 w-full sm:inline-flex">
