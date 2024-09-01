@@ -15,7 +15,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
-export const description = "An interactive bar chart"
+// export const description = "An interactive bar chart"
 import Navbar from '@/components/Navbar';
 import React from 'react';
 import Link from "next/link"
