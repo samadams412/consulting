@@ -36,7 +36,7 @@ export default function Home() {
                   <div>
                     <h3 className="text-lg font-semibold">IT Strategy</h3>
                     <p className="text-muted-foreground">
-                      We'll help you develop a strategic IT roadmap to align with your business goals.
+                      We&apos;ll help you develop a strategic IT roadmap to align with your business goals.
                     </p>
                   </div>
                 </li>
@@ -80,7 +80,7 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">What Our Clients Say</h2>
               <p className="mt-4 md:text-xl text-muted-foreground ">
-                Hear from our satisfied clients and learn how we've helped them achieve their goals.
+                Hear from our satisfied clients and learn how we&apos;ve helped them achieve their goals.
               </p>
             </div>
             <div className="grid gap-6">
