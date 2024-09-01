@@ -19,7 +19,11 @@ import {
 } from "@/components/ui/chart";
 import Navbar from "@/components/Navbar";
 
-// export const description = "A line chart with dots";
+// Add metadata export for description
+// export const metadata = {
+//   title: "Managed IT Services",
+//   description: "A line chart with dots for managed IT services performance",
+// };
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
@@ -98,5 +102,4 @@ export default function FinancePage() {
       </Card>
     </div>
   );
-};
-
+}
