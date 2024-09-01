@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar'
 import React from 'react'
 
-export default function databackup() {
+export default function DataBackupPage() {
   return (
     <div>
         <Navbar />

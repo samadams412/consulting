@@ -1,90 +1,216 @@
-import React from 'react';
-import { FaCloudDownloadAlt, FaIndustry } from "react-icons/fa";
-import { GrTechnology } from "react-icons/gr";
-import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
-import Link from 'next/link';
+"use client";
+import React, { useState } from "react";
+import { FaCloudDownloadAlt, FaBars, FaTimes } from "react-icons/fa";
+import Link from "next/link";
 
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuLink,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
+import { NavigationMenuContent, NavigationMenuItem, NavigationMenuTrigger } from "@radix-ui/react-navigation-menu";
+
+const services: {title: string, href: string, description: string}[] = [
+  {
+    title: "Managed IT",
+    href: "/services/managed-it",
+    description: "Comprehensive IT management solutions for your business.",
+  },
+  {
+    title: "Cloud Computing",
+    href: "/services/cloud-computing",
+    description: "Transform your business with cloud technology.",
+  },
+  {
+    title: "Cybersecurity",
+    href: "/services/cybersecurity",
+    description: "Protect your digital assets with cutting-edge security.",
+  },
+  {
+    title: "Network Solutions",
+    href: "/services/network-solutions",
+    description: "Ensure your network is robust, reliable, and scalable.",
+  },
+];
+const industries: {title: string, href: string, description: string}[] = [
+  {
+    title: "Healthcare",
+    href: "/industries/healthcare",
+    description: "Solutions tailored for the healthcare industry.",
+  },
+  {
+    title: "Finance",
+    href: "/industries/finance",
+    description: "Financial services and technology solutions.",
+  },
+  {
+    title: "Legal",
+    href: "/industries/legal",
+    description: "Legal industry-specific services and tools.",
+  },
+  {
+    title: "Education",
+    href: "/industries/education",
+    description: "Educational technology and services.",
+  },
+  {
+    title: "Manufacturing",
+    href: "/industries/manufacturing",
+    description: "Manufacturing solutions and innovations.",
+  },
+];
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <Menubar className='flex'>
-      <Link href={'/'} className='mx-3'>
-        <FaCloudDownloadAlt className='text-4xl' />
+    <header className="flex h-20 w-full items-center bg-blue-800 px-4 md:px-6">
+      {/* Mobile Menu using Sheet */}
+      <Sheet>
+        <SheetTrigger asChild className="mx-2">
+          <Button variant="outline" size="icon" className="lg:hidden">
+            {isOpen ? (
+              <FaTimes className="h-6 w-6 " />
+            ) : (
+              <FaBars className="h-6 w-6 " />
+            )}
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="left">
+          <div className="grid gap-2 py-6">
+            <Link
+              href="/"
+              className="flex w-full items-center py-2 text-lg font-semibold text-black"
+            >
+              Home
+            </Link>
+            <Link
+              href="/services"
+              className="flex w-full items-center py-2 text-lg font-semibold text-black"
+            >
+              Services
+            </Link>
+            <Link
+              href="/about"
+              className="flex w-full items-center py-2 text-lg font-semibold text-black"
+            >
+              About Us
+            </Link>
+            <Link
+              href="/resources"
+              className="flex w-full items-center py-2 text-lg font-semibold text-black"
+            >
+              Resources
+            </Link>
+            <Link
+              href="/contact"
+              className="flex w-full items-center py-2 text-lg font-semibold text-black"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </SheetContent>
+      </Sheet>
+
+      {/* Logo */}
+      <Link href="/" className="flex items-center mr-auto lg:mr-6">
+        <FaCloudDownloadAlt className="text-4xl text-white" />
+        <span className="ml-2 text-white font-bold">Consulting</span>
       </Link>
+
+      {/* Navigation for larger screens with dropdowns */}
+      <NavigationMenu className="hidden lg:flex  text-sm font-medium text-white">
+        <NavigationMenuList>
+ 
+          {/* Services Menu */}
       
-      <MenubarMenu>
-        <MenubarTrigger><GrTechnology className='mx-1' />Services</MenubarTrigger>
-        <MenubarContent>
-          <MenubarItem>
-            <Link href={'/services/managed-it'}>Managed IT</Link>
-          </MenubarItem>
-          <MenubarItem>
-            <Link href={'/services/cloud-computing'}>Cloud Computing</Link>
-          </MenubarItem>
-          <MenubarItem>
-            <Link href={'/services/cybersecurity'}>Cybersecurity</Link>
-          </MenubarItem>
-          <MenubarItem>
-            <Link href={'/services/databackup'}>Data & Backup Recovery</Link>
-          </MenubarItem>
-          <MenubarItem>
-            <Link href={'/services/managed-network'}>Network Management</Link>
-          </MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
-
-      <MenubarMenu>
-        <MenubarTrigger><FaIndustry className='mx-1' />Industries</MenubarTrigger>
-        <MenubarContent>
-          <MenubarItem>Healthcare</MenubarItem>
-          <MenubarItem>Finance</MenubarItem>
-          <MenubarItem>Legal</MenubarItem>
-          <MenubarItem>Education</MenubarItem>
-          <MenubarItem>Manufacturing</MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
-
-      <MenubarMenu>
-        <MenubarTrigger>Solutions</MenubarTrigger>
-        <MenubarContent>
-          <MenubarItem>Cloud Migration</MenubarItem>
-          <MenubarItem>Business Continuity</MenubarItem>
-          <MenubarItem>Remote Work</MenubarItem>
-          <MenubarItem>VoIP Solutions</MenubarItem>
-          <MenubarItem>IT Consulting</MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
-
-      <MenubarMenu>
-        <MenubarTrigger>About Us</MenubarTrigger>
-        <MenubarContent>
-          <MenubarItem>Our Story</MenubarItem>
-          <MenubarItem>Leadership Team</MenubarItem>
-          <MenubarItem>Careers</MenubarItem>
-          <MenubarItem>Partners</MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
-
-      <MenubarMenu>
-        <MenubarTrigger>Resources</MenubarTrigger>
-        <MenubarContent>
-          <MenubarItem>Blog</MenubarItem>
-          <MenubarItem>Case Studies</MenubarItem>
-          <MenubarItem>Webinars</MenubarItem>
-          <MenubarItem>White Papers</MenubarItem>
-          <MenubarItem>Events</MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
-
-      <MenubarMenu>
-        <MenubarTrigger className="text-right">Contact Us</MenubarTrigger>
-        <MenubarContent>
-          {/* Assuming "Contact Us" menu items are different from "Solutions and more" */}
-          <MenubarItem>Contact Form</MenubarItem>
-          <MenubarItem>Support</MenubarItem>
-          <MenubarItem>Sales Inquiry</MenubarItem>
-          <MenubarItem>Location</MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
-    </Menubar>
+            <NavigationMenuItem className="px-4 py-2">
+              <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+              <NavigationMenuContent className="w-80 md:w-[400px] lg:w-[500px] overflow-auto">
+              <ul className="grid w-full gap-3 p-4 md:grid-cols-2 lg:w-full lg:grid-cols-1">
+              {services.map((service) => (
+                <ListItem
+                  key={service.title}
+                  title={service.title}
+                  href={service.href}
+                >
+                  {service.description}
+                </ListItem>
+              ))}
+            </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem className="px-4 py-2">
+              <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
+              <NavigationMenuContent className="w-80 md:w-[400px] lg:w-[500px] overflow-auto">
+              <ul className="grid w-full gap-3 p-4 md:grid-cols-2 lg:w-full lg:grid-cols-1">
+              {industries.map((industry) => (
+                <ListItem
+                  key={industry.title}
+                  title={industry.title}
+                  href={industry.href}
+                >
+                  {industry.description}
+                </ListItem>
+              ))}
+            </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          
+          <NavigationMenuLink asChild>
+            <Link
+              href="/about"
+              className="px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-slate-500 rounded-md"
+            >
+              About Us
+            </Link>
+          </NavigationMenuLink>
+          <NavigationMenuLink asChild>
+            <Link
+              href="/resources"
+              className="px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-slate-500  rounded-md"
+            >
+              Resources
+            </Link>
+          </NavigationMenuLink>
+          <NavigationMenuLink asChild>
+            <Link
+              href="/contact"
+              className="px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-slate-500  rounded-md"
+            >
+              Contact Us
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </header>
   );
 }
+
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  )
+})
+ListItem.displayName = "ListItem"
