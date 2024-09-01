@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/chart";
 import Navbar from "@/components/Navbar";
 
-export const description = "A line chart with dots";
+// export const description = "A line chart with dots";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
