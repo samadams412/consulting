@@ -41,7 +41,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-const FinancePage = () => {
+export default function FinancePage() {
   return (
     <div>
       <Navbar />
@@ -99,4 +99,4 @@ const FinancePage = () => {
     </div>
   );
 };
-export default FinancePage;
+
