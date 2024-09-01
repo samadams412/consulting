@@ -124,13 +124,19 @@ export default function HeroSectionImageWithReviews() {
             </div>
           </div>
           {/* Col */}
-          <div className="relative ms-4">
-            <img
-              className="w-full rounded-md"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJc7KxfF6HaIF9hD2GxIqCtg2M8r8bOsJ09g&s"
-              alt="Image Description"
-            />
-          </div>
+          <div className="relative">
+              <img
+                src="/cloudimg-1.jpg"
+                width={550}
+                height={550}
+                alt="Services"
+                className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
+              />
+              <div className="absolute -bottom-6 -right-6 rounded-xl bg-primary px-4 py-2 text-primary-foreground shadow-lg">
+                <h3 className="text-lg font-semibold">Trusted by 500+</h3>
+                <p className="text-sm">Businesses worldwide</p>
+              </div>
+            </div>
           {/* End Col */}
         </div>
         {/* End Grid */}

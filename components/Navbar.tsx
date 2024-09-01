@@ -87,10 +87,16 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              href="/services"
+              href="/services/managed-it"
               className="flex w-full items-center py-2 text-lg font-semibold text-black"
             >
               Services
+            </Link>
+            <Link
+              href="/industries/finance"
+              className="flex w-full items-center py-2 text-lg font-semibold text-black"
+            >
+              Industries
             </Link>
             <Link
               href="/about"
@@ -117,7 +123,7 @@ export default function Navbar() {
       {/* Logo */}
       <Link href="/" className="flex items-center mr-auto lg:mr-6">
         <FaCloudDownloadAlt className="text-4xl text-white" />
-        <span className="ml-2 text-white font-bold">Consulting</span>
+        <span className="ml-2 text-white font-bold">CloudMinds Consulting</span>
       </Link>
 
       {/* Navigation for larger screens with dropdowns */}
@@ -129,7 +135,7 @@ export default function Navbar() {
             <NavigationMenuItem className="px-4 py-2">
               <NavigationMenuTrigger>Services</NavigationMenuTrigger>
               <NavigationMenuContent className="w-80 md:w-[400px] lg:w-[500px] overflow-auto">
-              <ul className="grid w-full gap-3 p-4 md:grid-cols-2 lg:w-full lg:grid-cols-1">
+              <ul className="grid w-full gap-3 p-4 md:grid-cols-2 lg:grid-cols-2 lg:grid-cols-1">
               {services.map((service) => (
                 <ListItem
                   key={service.title}
@@ -145,7 +151,7 @@ export default function Navbar() {
             <NavigationMenuItem className="px-4 py-2">
               <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
               <NavigationMenuContent className="w-80 md:w-[400px] lg:w-[500px] overflow-auto">
-              <ul className="grid w-full gap-3 p-4 md:grid-cols-2 lg:w-full lg:grid-cols-1">
+              <ul className="grid w-full gap-3 p-4 md:grid-cols-2 lg:grid-cols-2 lg:grid-cols-1">
               {industries.map((industry) => (
                 <ListItem
                   key={industry.title}
