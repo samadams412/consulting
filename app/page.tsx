@@ -97,8 +97,8 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-muted-foreground">
-                    "The IT Consulting team has been instrumental in transforming our IT infrastructure. Their
-                    expertise and dedication have been invaluable to our business."
+                  &quot;The IT Consulting team has been instrumental in transforming our IT infrastructure. Their
+                    expertise and dedication have been invaluable to our business.&quot;
                   </p>
                 </CardContent>
               </Card>
@@ -115,8 +115,8 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-muted-foreground">
-                    "The IT Consulting team has been a true partner in helping us navigate the complex world of
-                    technology. Their guidance has been invaluable."
+                    &quot;The IT Consulting team has been a true partner in helping us navigate the complex world of
+                    technology. Their guidance has been invaluable.&quot;
                   </p>
                 </CardContent>
               </Card>

@@ -155,7 +155,7 @@ const ManagedITPage = () => {
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
                     Our managed IT services provide businesses with the comprehensive support they need to keep their
-                    technology running smoothly. From 24/7 monitoring to remote support and data backup, we've got you
+                    technology running smoothly. From 24/7 monitoring to remote support and data backup, we&apos;ve got you
                     covered.
                   </p>
                 </div>
@@ -216,7 +216,7 @@ const ManagedITPage = () => {
                       <h3 className="text-xl font-bold">Remote Support</h3>
                       <p className="text-muted-foreground">
                         Our remote support team is available to assist you with any technical issues, no matter where
-                        you're located.
+                        you&apos;re located.
                       </p>
                     </div>
                   </li>
