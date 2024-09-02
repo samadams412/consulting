@@ -3,6 +3,6 @@ import React from 'react'
 
 export default function EducationPage() {
   return (
-    <div><Navbar/>EducationPage</div>
+    <div>EducationPage</div>
   )
 }

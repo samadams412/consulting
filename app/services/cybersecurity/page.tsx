@@ -4,7 +4,7 @@ import React from 'react'
 export default function Cybersecurity() {
   return (
     <div>
-        <Navbar/>
+        
         Cybersecurity
         </div>
   )

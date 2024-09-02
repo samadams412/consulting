@@ -1,10 +1,10 @@
-import Navbar from '@/components/Navbar'
+
 import React from 'react'
 import "../../../app/assets/css/styles.css"
 export default function ManagedNetwork() {
   return (
     <>
-    <Navbar />
+    
     <div className='demo'>
       <div className='max-w-7xl mx-auto'>
         <header>

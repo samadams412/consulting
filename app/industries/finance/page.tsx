@@ -48,7 +48,7 @@ const chartConfig = {
 export default function FinancePage() {
   return (
     <div>
-      <Navbar />
+      
       <Card>
         <CardHeader>
           <CardTitle>Line Chart - Dots</CardTitle>

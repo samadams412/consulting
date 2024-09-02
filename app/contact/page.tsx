@@ -16,9 +16,7 @@ import Navbar from "../../components/Navbar";
 export default function ContactPage() {
   return (
     <>
-      <div>
-        <Navbar />
-      </div>
+    
       <div className="flex items-center justify-center min-h-screen px-3">
         <Card className="mx-auto md:w-[600px] lg:w-[600px] sm:w-[400px] w-[400px]">
           <CardHeader>

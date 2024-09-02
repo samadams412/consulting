@@ -16,13 +16,11 @@ export default function Home() {
   
   return (
     <div className="">
-
-      <Navbar />
-      <main className="flex-1 ">
+      <main className="">
         <section className="relative h-[80dvh] w-full overflow-hidden">
           <Hero/>
         </section>
-        <section className="py-12 md:py-24 bg-muted">
+        <section className="py-12 md:py-24">
           <div className="container grid gap-10 px-4 sm:px-6 md:grid-cols-2 md:px-8">
             <div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Our Services</h2>
@@ -75,7 +73,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className=" py-12 md:py-24">
+        <section className=" py-12 md:py-24 bg-muted">
           <div className="container grid gap-10 px-4 sm:px-6 md:grid-cols-2 md:px-8">
             <div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">What Our Clients Say</h2>
@@ -123,7 +121,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-12 md:py-24 bg-muted">
+        <section className="py-12 md:py-24">
           <div className="container grid gap-10 px-4 sm:px-6 md:grid-cols-2 md:px-8">
             <div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Get in Touch</h2>

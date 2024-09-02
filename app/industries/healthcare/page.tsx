@@ -3,6 +3,6 @@ import React from 'react'
 
 export default function HealthCarePage() {
   return (
-    <div><Navbar/>HealthCarePage</div>
+    <div>HealthCarePage</div>
   )
 }

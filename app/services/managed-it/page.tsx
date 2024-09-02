@@ -16,7 +16,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 // export const description = "An interactive bar chart"
-import Navbar from '@/components/Navbar';
+
 import React from 'react';
 import Link from "next/link"
 
@@ -143,7 +143,7 @@ const ManagedITPage = () => {
 
   return (
     <div>
-      <Navbar />
+      
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container px-4 md:px-6">
