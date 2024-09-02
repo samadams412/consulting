@@ -74,7 +74,8 @@ export default function Navbar({ toggleDarkMode, isDarkMode}: NavbarProps) {
 return (
     <header className="flex h-20 w-full items-center dark:bg-transparent bg-blue-800 px-4 md:px-6">
       {/* Mobile Menu using Sheet */}
-      <Sheet>
+   {/* Mobile Menu using Sheet */}
+   <Sheet>
         <SheetTrigger asChild className="mx-2">
           <Button variant="outline" size="icon" className="lg:hidden">
             {isOpen ? (
@@ -86,14 +87,46 @@ return (
         </SheetTrigger>
         <SheetContent side="left">
           <div className="grid gap-2 py-6">
-            {/* Links */}
-            <Link href="/" className="flex w-full items-center py-2 text-lg font-semibold text-black">
+            <Link
+              href="/"
+              className="flex w-full items-center py-2 text-lg font-semibold "
+            >
               Home
             </Link>
-            {/* (Other links unchanged) */}
+            <Link
+              href="/services/managed-it"
+              className="flex w-full items-center py-2 text-lg font-semibold "
+            >
+              Services
+            </Link>
+            <Link
+              href="/industries/finance"
+              className="flex w-full items-center py-2 text-lg font-semibold "
+            >
+              Industries
+            </Link>
+            <Link
+              href="/about"
+              className="flex w-full items-center py-2 text-lg font-semibold "
+            >
+              About Us
+            </Link>
+            <Link
+              href="/resources"
+              className="flex w-full items-center py-2 text-lg font-semibold"
+            >
+              Resources
+            </Link>
+            <Link
+              href="/contact"
+              className="flex w-full items-center py-2 text-lg font-semibold "
+            >
+              Contact Us
+            </Link>
           </div>
         </SheetContent>
       </Sheet>
+
 
       {/* Logo */}
       <Link href="/" className="flex items-center mr-auto lg:mr-6">
