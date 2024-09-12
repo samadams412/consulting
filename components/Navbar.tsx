@@ -73,7 +73,7 @@ export default function Navbar({ toggleDarkMode, isDarkMode}: NavbarProps) {
 
 return (
     <header className="flex h-20 w-full items-center dark:bg-transparent bg-blue-800 px-4 md:px-6">
-      {/* Mobile Menu using Sheet */}
+     
    {/* Mobile Menu using Sheet */}
    <Sheet>
         <SheetTrigger asChild className="mx-2">
@@ -134,13 +134,7 @@ return (
         <span className="ml-2 text-white font-bold">CloudMinds Consulting</span>
       </Link>
 
-      {/* Dark Mode Toggle */}
-      <button
-        onClick={toggleDarkMode}
-        className="ml-4 p-2 text-white transition-colors hover:bg-gray-700 rounded-md"
-      >
-        {isDarkMode ? <FaSun className="h-6 w-6" /> : <FaMoon className="h-6 w-6" />}
-      </button>
+ 
 
       {/* Navigation for larger screens with dropdowns */}
       <NavigationMenu className="hidden lg:flex text-sm font-medium text-white">
@@ -188,6 +182,13 @@ return (
             </Link>
           </NavigationMenuLink>
         </NavigationMenuList>
+             {/* Dark Mode Toggle */}
+      <button
+        onClick={toggleDarkMode}
+        className="ml-4 p-2 text-white transition-colors hover:bg-gray-700 rounded-md"
+      >
+        {isDarkMode ? <FaSun className="h-6 w-6" /> : <FaMoon className="h-6 w-6" />}
+      </button>
       </NavigationMenu>
     </header>
   );
