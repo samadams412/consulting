@@ -20,7 +20,7 @@ export default function Home() {
           From IT strategy to implementation, we offer a comprehensive suite of
           services to help your business thrive.
         </p>
-        <div className="container grid gap-10px-4 sm:px-6 md:grid-cols-2 md:px-8">
+        <div className="container grid gap-10 px-4 sm:px-6 md:grid-cols-2 md:px-8">
           <div>
             <ul className="mt-6 space-y-4">
               <li className="flex items-start">
