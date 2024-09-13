@@ -9,7 +9,7 @@ import ContactForm from "@/components/ContactForm";
 export default function Home() {
   return (
     <main className="">
-      <section className="p-12 relative  w-full overflow-hidden">
+      <section className="p-12 relative   ">
         <Hero />
       </section>
       <section className="p-12 bg-muted">
@@ -146,8 +146,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="p-12 bg-muted">
-        <div className="container grid gap-10 px-4 sm:px-6 md:grid-cols-2 md:px-8">
+      <section className="p-12 bg-muted ">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
           <div className="relative">
              <Image
               src="/contact.jpg"
@@ -156,7 +156,7 @@ export default function Home() {
               alt="Contact"
               className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
             />
-            <div className="absolute -bottom-6 -left-6 rounded-xl bg-primary px-4 py-2 text-primary-foreground shadow-lg">
+            <div className="absolute -top-6 -right-6 rounded-xl bg-primary px-4 py-2 text-primary-foreground shadow-lg">
               <h3 className="text-lg font-semibold">Get a Free Consultation</h3>
               <p className="text-sm">Schedule a call with our experts</p>
             </div>
