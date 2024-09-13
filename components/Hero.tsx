@@ -4,7 +4,7 @@ export default function HeroSectionImageWithReviews() {
   return (
     <>
       {/* Hero */}
-      <div className="container py-24 lg:py-32 px-6 bg-muted">
+      <div className="container">
         {/* Grid */}
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
           <div>
@@ -126,7 +126,7 @@ export default function HeroSectionImageWithReviews() {
           {/* Col */}
           <div className="relative">
               <img
-                src="/cloudimg-1.jpg"
+                src="/hero-image.webp"
                 width={550}
                 height={550}
                 alt="Services"

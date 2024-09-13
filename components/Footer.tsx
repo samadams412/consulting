@@ -50,7 +50,7 @@ const industries = [
 
 export default function Footer() {
   return (
-    <footer className="text-white py-8 dark:bg-muted bg-blue-800">
+    <footer className="py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center lg:flex-row lg:justify-between">
           {/* Logo Section */}
@@ -81,12 +81,12 @@ export default function Footer() {
 
               <NavigationMenuItem className="lg:px-4 py-2">
                 <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
-                <NavigationMenuContent className="w-80 md:w-[400px] lg:w-[500px] overflow-auto">
-                  <ul className="grid gap-2 p-2 grid-cols-2">
+                <NavigationMenuContent className="w-80 md:w-[400px] lg:w-[250px]">
+                  <ul className="grid gap-2 p-2 grid-cols-1">
                     {industries.map((industry) => (
                       <li key={industry.title}>
                         <NavigationMenuLink asChild>
-                          <Link href={industry.href} className="block text-sm">
+                          <Link href={industry.href} className="block text-sm hover:bg-accent/50">
                             {industry.title}
                           </Link>
                         </NavigationMenuLink>
