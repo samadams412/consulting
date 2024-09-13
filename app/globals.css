@@ -2,17 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Set the default class to dark to avoid flash of light mode */
-html {
-  /* Use a default color that matches your dark mode */
-  background-color: #1a202c; /* Dark gray, adjust as needed */
-}
 
-/* Apply dark mode styles */
-html.dark {
-  /* Dark mode styles */
-  background-color: #2d3748; /* Adjust as needed */
-}
 
 
 :root {
