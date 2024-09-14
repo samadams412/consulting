@@ -8,7 +8,7 @@ import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="w-full grid grid-cols-1">
       <section className="p-12 relative   ">
         <Hero />
       </section>
@@ -95,7 +95,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className=" p-12">
+      <section className="p-12">
         <div className="container grid gap-10 px-4 sm:px-6 md:grid-cols-2 md:px-8">
           <div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -143,26 +143,6 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-      <section className="p-12 bg-muted ">
-        <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
-          <div className="relative">
-             <Image
-              src="/contact.jpg"
-              width={550}
-              height={550}
-              alt="Contact"
-              className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
-            />
-            <div className="absolute -top-6 -right-6 rounded-xl bg-primary px-4 py-2 text-primary-foreground shadow-lg">
-              <h3 className="text-lg font-semibold">Get a Free Consultation</h3>
-              <p className="text-sm">Schedule a call with our experts</p>
-            </div>
-          </div>
-          <div>
-            <ContactForm/>
           </div>
         </div>
       </section>

@@ -222,7 +222,7 @@ export default function Navbar() {
           {/* Other Links */}
           <NavigationMenuLink asChild>
             <Link
-              href="/about"
+              href="/pages/about-us"
               className="px-4 py-2 text-sm font-medium transition-colors hover:bg-accent/50 rounded-md"
             >
               About Us
@@ -230,7 +230,7 @@ export default function Navbar() {
           </NavigationMenuLink>
           <NavigationMenuLink asChild>
             <Link
-              href="/contact"
+              href="/pages/contact"
               className="px-4 py-2 text-sm font-medium transition-colors hover:bg-accent/50 rounded-md"
             >
               Contact Us

@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button"
+import Link from "next/link";
 
 export default function HeroSectionImageWithReviews() {
   return (
@@ -17,9 +19,8 @@ export default function HeroSectionImageWithReviews() {
             
             <div className="mt-7 grid gap-3 w-full sm:inline-flex">
               <Button size={"lg"}>Get started</Button>
-              <Button variant={"outline"} size={"lg"}>
-                Contact sales team
-              </Button>
+              <Link href={"/pages/about"} className={buttonVariants({ variant: "outline", size: "lg" })}>Contact sales team</Link>
+
             </div>
            
             <div className="mt-6 lg:mt-10 grid grid-cols-2 gap-x-5">

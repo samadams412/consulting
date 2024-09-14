@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ContactForm() {
   return (
-    <Card className="mx-auto md:w-[600px] lg:w-[600px] sm:w-[400px] w-[400px]">
+    <Card className="mx-auto  w-[400px]">
       <CardHeader>
         <CardTitle>Get in Touch</CardTitle>
         <CardDescription>
