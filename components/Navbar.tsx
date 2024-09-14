@@ -152,7 +152,7 @@ export default function Navbar() {
       {/* Logo */}
       <Link href="/" className="flex items-center mr-auto lg:mr-6">
         <FaCloudDownloadAlt className="text-4xl" />
-        <span className="ml-2 font-bold">CloudMinds Consulting</span>
+        <span className="ml-2 font-bold">CloudCrest</span>
       </Link>
 
       {/* Navigation for larger screens with dropdowns */}

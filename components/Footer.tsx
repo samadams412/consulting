@@ -56,7 +56,7 @@ export default function Footer() {
         
           <div className="flex items-center mb-6 lg:mb-0">
             <FaCloudDownloadAlt className="text-4xl" />
-            <span className="ml-2 font-bold">CloudMinds Consulting</span>
+            <span className="ml-2 font-bold">CloudCrest</span>
           </div>
 
          
@@ -118,7 +118,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 text-center text-sm">
-          &copy; {new Date().getFullYear()} CloudMinds Consulting. All rights reserved.
+          &copy; {new Date().getFullYear()} CloudCrest. All rights reserved.
         </div>
       </div>
     </footer>
