@@ -4,7 +4,7 @@ export default function HeroSectionImageWithReviews() {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative w-full min-h-screen bg-cover bg-center" style={{ backgroundImage: `url('/hero.png')` }}>
+      {/*<div className="relative w-full min-h-screen bg-cover bg-center" style={{ backgroundImage: `url('/hero.png')` }}>*/}
         {/* Content Section */}
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="container">
@@ -55,7 +55,7 @@ export default function HeroSectionImageWithReviews() {
 
               <div className="relative">
                 <img
-                  src="/"
+                  src="/hero-image.webp"
                   width={550}
                   height={550}
                   alt=""
@@ -69,7 +69,7 @@ export default function HeroSectionImageWithReviews() {
             </div>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 }
