@@ -48,11 +48,6 @@ const services = [
 
 const industries = [
   {
-    title: "Healthcare",
-    href: "/pages/industries/healthcare",
-    description: "Solutions tailored for the healthcare industry.",
-  },
-  {
     title: "Finance",
     href: "/pages/industries/finance",
     description: "Financial services and technology solutions.",
@@ -116,31 +111,31 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              href="/services/managed-it"
+              href="/pages/services/managed-it"
               className="flex w-full items-center py-2 text-lg font-semibold"
             >
               Services
             </Link>
             <Link
-              href="/industries/finance"
+              href="/pages/industries/finance"
               className="flex w-full items-center py-2 text-lg font-semibold"
             >
               Industries
             </Link>
             <Link
-              href="/resources/blog"
+              href="/pages/resources/blog"
               className="flex w-full items-center py-2 text-lg font-semibold"
             >
               Resources
             </Link>
             <Link
-              href="/about"
+              href="/pages/about-us"
               className="flex w-full items-center py-2 text-lg font-semibold"
             >
               About Us
             </Link>
             <Link
-              href="/contact"
+              href="/pages/contact"
               className="flex w-full items-center py-2 text-lg font-semibold"
             >
               Contact Us
