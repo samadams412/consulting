@@ -4,10 +4,10 @@ export default function HeroSectionImageWithReviews() {
   return (
     <>
       {/* Hero Section */}
+      <div className="container">
       {/*<div className="relative w-full min-h-screen bg-cover bg-center" style={{ backgroundImage: `url('/hero.png')` }}>*/}
         {/* Content Section */}
         <div className="relative z-10 h-full flex items-center justify-center">
-          <div className="container">
             {/* Grid */}
             <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
               <div>
