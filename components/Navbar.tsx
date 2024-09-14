@@ -210,6 +210,7 @@ export default function Navbar() {
                     key={resource.title}
                     title={resource.title}
                     href={resource.href}
+                    target="__blank"
                   >
                     {resource.description}
                   </ListItem>
