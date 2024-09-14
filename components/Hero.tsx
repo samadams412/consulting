@@ -62,7 +62,7 @@ export default function HeroSectionImageWithReviews() {
                   className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
                 />
                 <div className="absolute -bottom-6 -right-6 rounded-xl bg-primary px-4 py-2 text-primary-foreground shadow-lg">
-                  <h3 className="text-lg font-semibold">Trusted by 500+</h3>
+                  <h3 className="text-lg font-semibold">Trusted by </h3>
                   <p className="text-sm">Businesses worldwide</p>
                 </div>
               </div>
