@@ -1,90 +1,274 @@
-import React from 'react';
-import { FaCloudDownloadAlt, FaIndustry } from "react-icons/fa";
-import { GrTechnology } from "react-icons/gr";
-import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarTrigger } from "@/components/ui/menubar";
-import Link from 'next/link';
+"use client";
+import React, { useState } from "react";
+import {
+  FaCloudDownloadAlt,
+  FaBars,
+  FaMoon,
+  FaSun,
+} from "react-icons/fa";
+import Link from "next/link";
+
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuLink,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
+import { ModeToggle } from "./ModeToggle";
+
+
+
+const services = [
+  {
+    title: "Managed IT",
+    href: "/pages/services/managed-it",
+    description: "Comprehensive IT management solutions for your business.",
+  },
+  {
+    title: "Cloud Computing",
+    href: "/pages/services/cloud-computing",
+    description: "Transform your business with cloud technology.",
+  },
+  {
+    title: "Cybersecurity",
+    href: "/pages/services/cybersecurity",
+    description: "Protect your digital assets with cutting-edge security.",
+  },
+  {
+    title: "Network Solutions",
+    href: "/pages/services/network-solutions",
+    description: "Ensure your network is robust, reliable, and scalable.",
+  },
+];
+
+const industries = [
+  {
+    title: "Healthcare",
+    href: "/pages/industries/healthcare",
+    description: "Solutions tailored for the healthcare industry.",
+  },
+  {
+    title: "Finance",
+    href: "/pages/industries/finance",
+    description: "Financial services and technology solutions.",
+  },
+  {
+    title: "Legal",
+    href: "/pages/industries/legal",
+    description: "Legal industry-specific services and tools.",
+  },
+  {
+    title: "Education",
+    href: "/pages/industries/education",
+    description: "Educational technology and services.",
+  },
+  {
+    title: "Manufacturing",
+    href: "/pages/industries/manufacturing",
+    description: "Manufacturing solutions and innovations.",
+  },
+];
+
+const resources = [
+  {
+    title: "Blog",
+    href: "https://sams-blog-gamma.vercel.app/",
+    description: "Read our latest blog posts.",
+  },
+  {
+    title: "Case Studies",
+    href: "/pages/resources/case-studies",
+    description: "Explore our case studies and success stories.",
+  },
+  {
+    title: "White Papers",
+    href: "/pages/resources/white-papers",
+    description: "Access our white papers and research.",
+  },
+  {
+    title: "Events",
+    href: "/pages/resources/events",
+    description: "Check out our upcoming events.",
+  },
+];
 
 export default function Navbar() {
   return (
-    <Menubar className='flex'>
-      <Link href={'/'}>
-        <FaCloudDownloadAlt className='text-4xl' />
+    <header className="flex h-20 w-full items-center justify-between px-4 md:px-6">
+      {/* Mobile Menu using Sheet */}
+      <Sheet>
+        <SheetTrigger asChild className="mx-2">
+          <Button variant="outline" size="icon" className="lg:hidden">
+            <FaBars className="h-6 w-6" />
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="left">
+          <div className="grid gap-2 py-6">
+            <Link
+              href="/"
+              className="flex w-full items-center py-2 text-lg font-semibold"
+            >
+              Home
+            </Link>
+            <Link
+              href="/services/managed-it"
+              className="flex w-full items-center py-2 text-lg font-semibold"
+            >
+              Services
+            </Link>
+            <Link
+              href="/industries/finance"
+              className="flex w-full items-center py-2 text-lg font-semibold"
+            >
+              Industries
+            </Link>
+            <Link
+              href="/resources/blog"
+              className="flex w-full items-center py-2 text-lg font-semibold"
+            >
+              Resources
+            </Link>
+            <Link
+              href="/about"
+              className="flex w-full items-center py-2 text-lg font-semibold"
+            >
+              About Us
+            </Link>
+            <Link
+              href="/contact"
+              className="flex w-full items-center py-2 text-lg font-semibold"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </SheetContent>
+      </Sheet>
+
+      {/* Logo */}
+      <Link href="/" className="flex items-center mr-auto lg:mr-6">
+        <FaCloudDownloadAlt className="text-4xl" />
+        <span className="ml-2 font-bold">CloudMinds Consulting</span>
       </Link>
-      
-      <MenubarMenu>
-        <MenubarTrigger><GrTechnology className='mx-1' />Services</MenubarTrigger>
-        <MenubarContent>
-          <MenubarItem>
-            <Link href={'/services/managed-it'}>Managed IT</Link>
-          </MenubarItem>
-          <MenubarItem>
-            <Link href={'/services/cloud-computing'}>Cloud Computing</Link>
-          </MenubarItem>
-          <MenubarItem>
-            <Link href={'/services/cybersecurity'}>Cybersecurity</Link>
-          </MenubarItem>
-          <MenubarItem>
-            <Link href={'/services/databackup'}>Data & Backup Recovery</Link>
-          </MenubarItem>
-          <MenubarItem>
-            <Link href={'/services/managed-network'}>Network Management</Link>
-          </MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
 
-      <MenubarMenu>
-        <MenubarTrigger><FaIndustry className='mx-1' />Industries</MenubarTrigger>
-        <MenubarContent>
-          <MenubarItem>Healthcare</MenubarItem>
-          <MenubarItem>Finance</MenubarItem>
-          <MenubarItem>Legal</MenubarItem>
-          <MenubarItem>Education</MenubarItem>
-          <MenubarItem>Manufacturing</MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
+      {/* Navigation for larger screens with dropdowns */}
+      <NavigationMenu className="hidden lg:flex text-sm font-medium ">
+        <NavigationMenuList>
+          {/* Services Menu */}
+          <NavigationMenuItem className="px-4 py-2">
+            <NavigationMenuTrigger className="flex items-center ">
+              Services
+            </NavigationMenuTrigger>
+            <NavigationMenuContent className="w-80 md:w-[400px] lg:w-[500px] overflow-auto">
+              <ul className="grid w-full gap-3 p-4 md:grid-cols-2 lg:grid-cols-2">
+                {services.map((service) => (
+                  <ListItem
+                    key={service.title}
+                    title={service.title}
+                    href={service.href}
+                  >
+                    {service.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
-      <MenubarMenu>
-        <MenubarTrigger>Solutions</MenubarTrigger>
-        <MenubarContent>
-          <MenubarItem>Cloud Migration</MenubarItem>
-          <MenubarItem>Business Continuity</MenubarItem>
-          <MenubarItem>Remote Work</MenubarItem>
-          <MenubarItem>VoIP Solutions</MenubarItem>
-          <MenubarItem>IT Consulting</MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
+          {/* Industries Menu */}
+          <NavigationMenuItem className="px-4 py-2">
+            <NavigationMenuTrigger className="flex items-center">
+              Industries
+            </NavigationMenuTrigger>
+            <NavigationMenuContent className="w-80 md:w-[400px] lg:w-[500px] overflow-auto">
+              <ul className="grid w-full gap-3 p-4 md:grid-cols-2 lg:grid-cols-2">
+                {industries.map((industry) => (
+                  <ListItem
+                    key={industry.title}
+                    title={industry.title}
+                    href={industry.href}
+                  >
+                    {industry.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
-      <MenubarMenu>
-        <MenubarTrigger>About Us</MenubarTrigger>
-        <MenubarContent>
-          <MenubarItem>Our Story</MenubarItem>
-          <MenubarItem>Leadership Team</MenubarItem>
-          <MenubarItem>Careers</MenubarItem>
-          <MenubarItem>Partners</MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
+          {/* Resources Menu */}
+          <NavigationMenuItem className="px-4 py-2">
+            <NavigationMenuTrigger className="flex items-center">
+              Resources
+            </NavigationMenuTrigger>
+            <NavigationMenuContent className="w-80 md:w-[400px] lg:w-[500px] overflow-auto">
+              <ul className="grid w-full gap-3 p-4 md:grid-cols-2 lg:grid-cols-2">
+                {resources.map((resource) => (
+                  <ListItem
+                    key={resource.title}
+                    title={resource.title}
+                    href={resource.href}
+                    target="__blank"
+                  >
+                    {resource.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
-      <MenubarMenu>
-        <MenubarTrigger>Resources</MenubarTrigger>
-        <MenubarContent>
-          <MenubarItem>Blog</MenubarItem>
-          <MenubarItem>Case Studies</MenubarItem>
-          <MenubarItem>Webinars</MenubarItem>
-          <MenubarItem>White Papers</MenubarItem>
-          <MenubarItem>Events</MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
+          {/* Other Links */}
+          <NavigationMenuLink asChild>
+            <Link
+              href="/about"
+              className="px-4 py-2 text-sm font-medium transition-colors hover:bg-accent/50 rounded-md"
+            >
+              About Us
+            </Link>
+          </NavigationMenuLink>
+          <NavigationMenuLink asChild>
+            <Link
+              href="/contact"
+              className="px-4 py-2 text-sm font-medium transition-colors hover:bg-accent/50 rounded-md"
+            >
+              Contact Us
+            </Link>
+          </NavigationMenuLink>
 
-      <MenubarMenu>
-        <MenubarTrigger className="text-right">Contact Us</MenubarTrigger>
-        <MenubarContent>
-          {/* Assuming "Contact Us" menu items are different from "Solutions and more" */}
-          <MenubarItem>Contact Form</MenubarItem>
-          <MenubarItem>Support</MenubarItem>
-          <MenubarItem>Sales Inquiry</MenubarItem>
-          <MenubarItem>Location</MenubarItem>
-        </MenubarContent>
-      </MenubarMenu>
-    </Menubar>
+          {/* Dark Mode Toggle */}
+          
+        </NavigationMenuList>
+        
+      </NavigationMenu>
+      <ModeToggle/>
+    </header>
   );
 }
+
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = "ListItem";
