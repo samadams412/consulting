@@ -53,13 +53,13 @@ export default function Footer() {
     <footer className="py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center lg:flex-row lg:justify-between">
-          {/* Logo Section */}
+        
           <div className="flex items-center mb-6 lg:mb-0">
             <FaCloudDownloadAlt className="text-4xl" />
             <span className="ml-2 font-bold">CloudMinds Consulting</span>
           </div>
 
-          {/* Navigation Menu */}
+         
           <NavigationMenu className="text-sm font-medium">
             <NavigationMenuList className="flex flex-col lg:flex-row w-full">
               <NavigationMenuItem className="lg:px-4 py-2 ">

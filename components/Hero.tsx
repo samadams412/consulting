@@ -14,16 +14,15 @@ export default function HeroSectionImageWithReviews() {
             <p className="mt-3 text-xl text-muted-foreground">
             Unlock your company&apos;s potential with tailored consulting solutions designed to drive success and innovation.
             </p>
-            {/* Buttons */}
+            
             <div className="mt-7 grid gap-3 w-full sm:inline-flex">
               <Button size={"lg"}>Get started</Button>
               <Button variant={"outline"} size={"lg"}>
                 Contact sales team
               </Button>
             </div>
-            {/* End Buttons */}
+           
             <div className="mt-6 lg:mt-10 grid grid-cols-2 gap-x-5">
-              {/* Review */}
               <div className="py-5">
                 <div className="flex space-x-1">
                   {star}
@@ -71,8 +70,6 @@ export default function HeroSectionImageWithReviews() {
                   </svg>
                 </div>
               </div>
-              {/* End Review */}
-              {/* Review */}
               <div className="py-5">
                 <div className="flex space-x-1">
                   {star}
@@ -120,10 +117,10 @@ export default function HeroSectionImageWithReviews() {
                   </svg>
                 </div>
               </div>
-              {/* End Review */}
+      
             </div>
           </div>
-          {/* Col */}
+ 
           <div className="relative">
               <img
                 src="/hero-image.webp"
@@ -137,11 +134,11 @@ export default function HeroSectionImageWithReviews() {
                 <p className="text-sm">Businesses worldwide</p>
               </div>
             </div>
-          {/* End Col */}
+         
         </div>
-        {/* End Grid */}
+   
       </div>
-      {/* End Hero */}
+     
     </>
   );
 }
