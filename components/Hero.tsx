@@ -4,10 +4,10 @@ export default function HeroSectionImageWithReviews() {
   return (
     <>
       {/* Hero Section */}
-      <div className="container">
-      {/*<div className="relative w-full min-h-screen bg-cover bg-center" style={{ backgroundImage: `url('/hero.png')` }}>*/}
+      <div className="relative w-full min-h-screen bg-cover bg-center" style={{ backgroundImage: `url('/hero.png')` }}>
         {/* Content Section */}
         <div className="relative z-10 h-full flex items-center justify-center">
+          <div className="container">
             {/* Grid */}
             <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
               <div>
@@ -55,21 +55,21 @@ export default function HeroSectionImageWithReviews() {
 
               <div className="relative">
                 <img
-                  src="/hero-image.webp"
+                  src="/"
                   width={550}
                   height={550}
                   alt=""
                   className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
                 />
                 <div className="absolute -bottom-6 -right-6 rounded-xl bg-primary px-4 py-2 text-primary-foreground shadow-lg">
-                  <h3 className="text-lg font-semibold">Trusted by </h3>
+                  <h3 className="text-lg font-semibold">Trusted by 500+</h3>
                   <p className="text-sm">Businesses worldwide</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      {/* </div> */}
+      </div>
     </>
   );
 }
