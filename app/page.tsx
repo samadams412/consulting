@@ -4,11 +4,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import Image from "next/image";
 import { JSX, SVGProps } from "react";
-import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
-    <main className="w-full grid grid-cols-1">
+    <main className="w-full grid">
       <section className="p-12 relative   ">
         <Hero />
       </section>
