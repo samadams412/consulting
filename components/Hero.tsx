@@ -6,7 +6,8 @@ export default function HeroSectionImageWithReviews() {
   return (
     <>
       {/* Hero */}
-      <div className="container">
+      {/* style={{ backgroundImage: "url('/cloudcrest-hero.webp')"}} */}
+      <div className="container ">
         {/* Grid */}
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
           <div>
@@ -124,7 +125,7 @@ export default function HeroSectionImageWithReviews() {
  
           <div className="relative">
               <img
-                src="/hero-image.webp"
+                src="/cloudcrest-hero.webp"
                 width={550}
                 height={550}
                 alt="Services"

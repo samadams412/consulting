@@ -5,49 +5,7 @@ import Link from "next/link";
 import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { NavigationMenuContent, NavigationMenuItem, NavigationMenuTrigger } from "@radix-ui/react-navigation-menu";
-
-const services = [
-  {
-    title: "Managed IT",
-    href: "/services/managed-it",
-  },
-  {
-    title: "Cloud Computing",
-    href: "/services/cloud-computing",
-  },
-  {
-    title: "Cybersecurity",
-    href: "/services/cybersecurity",
-  },
-  {
-    title: "Network Solutions",
-    href: "/services/network-solutions",
-  },
-];
-
-const industries = [
-  {
-    title: "Healthcare",
-    href: "/industries/healthcare",
-  },
-  {
-    title: "Finance",
-    href: "/industries/finance",
-  },
-  {
-    title: "Legal",
-    href: "/industries/legal",
-  },
-  {
-    title: "Education",
-    href: "/industries/education",
-  },
-  {
-    title: "Manufacturing",
-    href: "/industries/manufacturing",
-  },
-];
-
+import {services, industries, resources } from "../lib/data/nav-links"
 export default function Footer() {
   return (
     <footer className="py-8 border-t-2">
