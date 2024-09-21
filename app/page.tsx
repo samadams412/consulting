@@ -8,10 +8,10 @@ import { JSX, SVGProps } from "react";
 export default function Home() {
   return (
     <main className="w-full grid">
-      <section className="p-12 relative   ">
+      <section className="relative">
         <Hero />
       </section>
-      <section className="p-12 bg-muted">
+      <section className="p-10 bg-muted">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
           Our Services
         </h2>

@@ -56,6 +56,7 @@ export default function Navbar() {
               href="/pages/resources/blog"
               className="flex w-full items-center py-2 text-lg font-semibold"
             >
+              
               Resources
             </Link>
             <Link

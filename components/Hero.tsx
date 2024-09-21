@@ -1,15 +1,29 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { buttonVariants } from "@/components/ui/button"
-import Link from "next/link";
+import { useEffect, useState } from 'react';
 
 export default function HeroSectionImageWithReviews() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Ensures that the component is rendered on the client
+  }, []);
+
   return (
     <>
       {/* Hero */}
-      {/* style={{ backgroundImage: "url('/cloudcrest-hero.webp')"}} */}
-      <div className="container ">
+      <div className='w-full h-screen relative'>
+      <video
+        className='w-full h-full object-cover'
+        src="/datacenter.mov"
+        autoPlay
+        loop
+        muted
+      />
+      <div className="absolute container top-0">
         {/* Grid */}
-        <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
+        <div className="absolute grid p-12 mt-10 md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
           <div>
             <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
               Elevate Your Business with Expert Consulting
@@ -20,8 +34,9 @@ export default function HeroSectionImageWithReviews() {
             
             <div className="mt-7 grid gap-3 w-full sm:inline-flex">
               <Button size={"lg"}>Get started</Button>
-              <Link href={"/pages/about"} className={buttonVariants({ variant: "outline", size: "lg" })}>Contact sales team</Link>
-
+              <Button variant={"outline"} size={"lg"}>
+                Contact sales team
+              </Button>
             </div>
            
             <div className="mt-6 lg:mt-10 grid grid-cols-2 gap-x-5">
@@ -124,13 +139,13 @@ export default function HeroSectionImageWithReviews() {
           </div>
  
           <div className="relative">
-              <img
-                src="/cloudcrest-hero.webp"
+              {/* <img
+                src="/hero-image.webp"
                 width={550}
                 height={550}
                 alt="Services"
                 className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
-              />
+              /> */}
               <div className="absolute -bottom-6 -right-6 rounded-xl bg-primary px-4 py-2 text-primary-foreground shadow-lg">
                 <h3 className="text-lg font-semibold">Trusted by 500+</h3>
                 <p className="text-sm">Businesses worldwide</p>
@@ -140,7 +155,7 @@ export default function HeroSectionImageWithReviews() {
         </div>
    
       </div>
-     
+     </div>
     </>
   );
 }
