@@ -11,10 +11,10 @@ export default function HeroSectionImageWithReviews() {
         {/* Grid */}
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
           <div>
-            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+            <h1 className="scroll-m-20 text-xl font-extrabold tracking-tight lg:text-5xl ">
               Elevate Your Business with Expert Consulting
             </h1>
-            <p className="mt-3 text-xl text-muted-foreground">
+            <p className="mt-3 text-l text-muted-foreground">
             Unlock your company&apos;s potential with tailored consulting solutions designed to drive success and innovation.
             </p>
             

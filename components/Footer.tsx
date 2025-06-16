@@ -6,6 +6,8 @@ import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from "@/compon
 import { cn } from "@/lib/utils";
 import { NavigationMenuContent, NavigationMenuItem, NavigationMenuTrigger } from "@radix-ui/react-navigation-menu";
 import {services, industries, resources } from "../lib/data/nav-links"
+
+
 export default function Footer() {
   return (
     <footer className="py-8 border-t-2">
